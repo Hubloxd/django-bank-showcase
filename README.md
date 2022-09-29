@@ -1,5 +1,4 @@
 # Django Bank Example
-<hr>
 <h2>Features</h2>
 <ul>
     <li>
