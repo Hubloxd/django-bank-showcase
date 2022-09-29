@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+<a class="btn btn-primary" href="{% url 'Dashboard:dashboard' %}">Dashboard</a>
+<a class="btn btn-primary" href="{% url 'Auth:logout' %}">Log Out</a>
+
+{% endblock navbar %}
+
+{% block content %}
+    <!-- Page heading-->
+    <h1 class="mb-5">Welcome back {{name}} {{last_name}}</h1>
+    <p>Your Account Number: {{account_number}}</p>
+    <p>Your balance: ${{balance}}</p>
+    <a href="{% url 'Dashboard:transfer' %}"><button class="btn btn-primary">Transfer</button></a>
+{% endblock content %}

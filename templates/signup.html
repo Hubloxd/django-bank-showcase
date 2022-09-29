@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Page heading-->
+    <h1 class="mb-5">Sign up right now and experience new era of banking</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div style="display: flex; flex-direction: row;">
+            <input style="width: 50%" class="form-control form-control-lg" name="firstName" id="firstName" type="text" placeholder="First Name" data-sb-validations="required,firstName" required/>
+            <input style="width: 50%" class="form-control form-control-lg" name="secondName" id="secondName" type="text" placeholder="Second Name" data-sb-validations="required,secondName" required/>
+        </div>
+        <input class="form-control form-control-lg" name="emailAddress" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,username" required/>
+        <input class="form-control form-control-lg" name="username" id="username" type="text" placeholder="Username" data-sb-validations="required,username" required/>
+        <input class="form-control form-control-lg" name="password" id="password" type="password" placeholder="Password" data-sb-validations="required,password" required/>
+        <input class="form-control form-control-lg" name="passwordConfirm" id="passwordConfirm" type="password" placeholder="Confirm Password" data-sb-validations="required,passwordConfirm" required/>
+        <div class="col-auto"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button></div>
+    </form>
+{% endblock content %}
